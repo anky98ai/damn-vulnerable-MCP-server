@@ -2,6 +2,16 @@
 
 A deliberately vulnerable implementation of the Model Context Protocol (MCP) for educational purposes.
 
+## DVMCP v2
+
+This repository is a v2 of [Damn Vulnerable MCP Server](https://github.com/harishsg993010/damn-vulnerable-MCP-server). The original project is the 10-challenge SSE lab. This version keeps those lessons and adds a scored lab around them.
+
+- **15 challenges.** Challenges 1–10 are rewritten so a normal first step does not print the flag. Challenges 11–15 add JWT claim forgery, hidden identity override, workflow IDOR, marketplace plugin poisoning, and dependency confusion.
+- **Web dashboard.** Register, browse challenges, use Manual Explorer, buy hints, submit flags, and follow a leaderboard, profile, and analytics. The UI is served with the API on port 8081.
+- **AI Assistance.** A chat tab can drive the challenge tools with Claude. The API key stays in the browser.
+- **Streamable HTTP.** Each challenge listens at `http://localhost:900N/mcp` on ports 9001–9015.
+- **Optional player pool.** `docker compose` still runs one shared container. A hosted lab can give each player their own challenge container. See [deploy/README.md](deploy/README.md).
+
 ## Overview
 
 The Damn Vulnerable Model Context Protocol (DVMCP) is an educational project designed to demonstrate security vulnerabilities in MCP implementations. It contains 15 challenges of increasing difficulty that showcase different types of vulnerabilities and attack vectors.
